@@ -23,7 +23,7 @@
             rgba(0, 255, 0, 0.4)),
         url(img/banner-bg.png);
     background-repeat:repeat-x;
-    @include box-shadow(#e8e8e8, 5px, 2px, 0);
+    @include box-shadow(#ccc, 5px, 2px, 0);
     h1 {
         text-indent:-9999em;
     }

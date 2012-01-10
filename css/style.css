@@ -1,3 +1,4 @@
+@charset "IBM437";
 /* line 1, ../sass/partials/_reset.scss */
 * {
   margin: 0;
@@ -813,28 +814,29 @@ td {
 
 /* line 1, ../sass/partials/_main.scss */
 body {
-  background: #f5f5f5;
+  background: #e8e8e8;
 }
 
 /* line 5, ../sass/partials/_main.scss */
 #content {
-  background: #fff;
+  background: #f5f5f5;
   min-height: 500px;
-  -moz-box-shadow: 2px 2px 5px #e8e8e8;
+  padding: 5px 25px;
+  -moz-box-shadow: 2px 2px 5px #cccccc;
   /* FF3.5+ */
-  -webkit-box-shadow: 2px 2px 5px #e8e8e8;
+  -webkit-box-shadow: 2px 2px 5px #cccccc;
   /* Saf3.0+, Chrome */
-  box-shadow: 2px 2px 5px #e8e8e8;
+  box-shadow: 2px 2px 5px #cccccc;
   /* Opera 10.5, IE9, Chrome 10+ */
 }
-/* line 10, ../sass/partials/_main.scss */
+/* line 12, ../sass/partials/_main.scss */
 #content #left {
   float: left;
   margin: 0 10px;
   margin-left: 0;
-  width: 730px;
+  width: 680px;
 }
-/* line 13, ../sass/partials/_main.scss */
+/* line 15, ../sass/partials/_main.scss */
 #content #right {
   float: left;
   margin: 0 10px;
@@ -852,11 +854,11 @@ body {
   background-image: -o-linear-gradient(left, rgba(255, 0, 0, 0.4), rgba(0, 0, 255, 0.4), rgba(0, 255, 0, 0.4)), url(img/banner-bg.png);
   background-image: linear-gradient(left, rgba(255, 0, 0, 0.4), rgba(0, 0, 255, 0.4), rgba(0, 255, 0, 0.4)), url(img/banner-bg.png);
   background-repeat: repeat-x;
-  -moz-box-shadow: 2px 0 5px #e8e8e8;
+  -moz-box-shadow: 2px 0 5px #cccccc;
   /* FF3.5+ */
-  -webkit-box-shadow: 2px 0 5px #e8e8e8;
+  -webkit-box-shadow: 2px 0 5px #cccccc;
   /* Saf3.0+, Chrome */
-  box-shadow: 2px 0 5px #e8e8e8;
+  box-shadow: 2px 0 5px #cccccc;
   /* Opera 10.5, IE9, Chrome 10+ */
 }
 /* line 27, ../sass/partials/_banner.scss */
