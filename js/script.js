@@ -1,7 +1,7 @@
 var App = (function($, undefined) {
     
     var handleSubmenu = function(e) {
-        e.preventDefault();
+        e.stopPropagation();
         
         var $this = $(this),
             $siblings = $this.siblings('li');
@@ -9,13 +9,17 @@ var App = (function($, undefined) {
         $siblings.children('ul').hide(); // hide any other submenus that may be open
         
         $this.children('ul').toggle(); // toggle the clicked submenu
-    }
+    };
+    
+    var handleCloseMenu = function() {
+        $('.has-submenu > ul').hide();
+    };
     
     return {
-        init: function() {
-            var $submenu = $('.has-submenu');
+        init: function() {            
+            $('.has-submenu').bind('click', handleSubmenu);
             
-            $submenu.bind('click', handleSubmenu);
+            $(window).bind('click', handleCloseMenu);
         }
     }
     

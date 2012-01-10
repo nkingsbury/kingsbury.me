@@ -12,10 +12,15 @@
             rgba(0, 0, 255, 0.4), 
             rgba(0, 255, 0, 0.4)),
         url(img/banner-bg.png);
-    background-image: gradient(linear, left top, right top, 
-            color-stop(0, rgba(255, 0, 0, 0.4)), 
-            color-stop(50%, rgba(0, 0, 255, 0.4)), 
-            color-stop(1, rgba(0, 255, 0, 0.4))), 
+    background-image: -o-linear-gradient(left, 
+            rgba(255, 0, 0, 0.4), 
+            rgba(0, 0, 255, 0.4), 
+            rgba(0, 255, 0, 0.4)),
+        url(img/banner-bg.png);
+    background-image: linear-gradient(left, 
+            rgba(255, 0, 0, 0.4), 
+            rgba(0, 0, 255, 0.4), 
+            rgba(0, 255, 0, 0.4)),
         url(img/banner-bg.png);
     background-repeat:repeat-x;
     @include box-shadow(#e8e8e8, 5px, 2px, 0);
