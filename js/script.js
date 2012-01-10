@@ -1,45 +1,21 @@
 var App = (function($, undefined) {
     
-    var handleMenu = function(e) {
+    var handleSubmenu = function(e) {
         e.preventDefault();
         
         var $this = $(this),
-            $submenu = $this.children('ul');
-            
-        $submenu.toggle();
+            $siblings = $this.siblings('li');
+        
+        $siblings.children('ul').hide(); // hide any other submenus that may be open
+        
+        $this.children('ul').toggle(); // toggle the clicked submenu
     }
-    /*
-    var Menu = function(selector) {
-        this.$menu = $(selector);
-    }
-    
-    Menu.prototype = {
-        var menu = this,
-            $open;
-        
-        return: {
-            handleClick: function(e) {
-                var $li = $(this);
-                e.preventDefault();
-
-                if($li.hasClass('has-submenu')) {
-                    $li.toggle();
-
-                }
-            },
-            
-        }
-        
-        
-        
-    }
-    */
     
     return {
         init: function() {
-            var $sub = $('.has-submenu');
+            var $submenu = $('.has-submenu');
             
-            $sub.bind('click', handleMenu);
+            $submenu.bind('click', handleSubmenu);
         }
     }
     
