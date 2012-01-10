@@ -1,0 +1,35 @@
+.container { 
+    position: relative; 
+    width: ($column-width + 2 * $gutter-width) * $columns - (2 * $gutter-width);
+    margin: 0 auto;
+    padding: 0;
+    @for $n from 1 to $columns {
+        .col-#{$n} {
+            @include col-base(false);
+            width: span($n);
+        }
+        .push-#{$n} {
+            margin-left: span($n);
+        }
+        .pull-#{$n} {
+            margin-left: -1 * span($n);
+        }
+        .append-#{$n} {
+            padding-right: span($n);
+        }
+        .prepend-#{$n} {
+            padding-left: span($n);
+        }
+    }
+    .first {
+        @include first;
+        padding-left:span(1);
+    }
+    .last {
+        @include last;
+        padding-right:span(1);
+    }
+}
+.clearfix:before, .clearfix:after, .container:before, .container:after { content: ""; display: table; }
+.clearfix:after, .container:after { clear: both; }
+.clearfix, .container { *zoom: 1; }

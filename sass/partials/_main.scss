@@ -1,0 +1,18 @@
+body {
+    background:#f5f5f5;
+}
+
+#content {
+    background:#fff;
+    min-height:500px;
+    @include box-shadow(#e8e8e8, 5px, 2px, 2px);
+    
+    #left {
+        @include col(15, true);
+    }
+    #right {
+        @include col(5, false, true);
+    }
+}
+
+@import "partials/banner"

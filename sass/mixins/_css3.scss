@@ -1,0 +1,186 @@
+@function power ($x, $n) {
+    $ret: 1;
+    
+    @if $n >= 0 {
+        @for $i from 1 through $n {
+            $ret: $ret * $x;
+        } 
+    } @else {
+        @for $i from $n through 0 {
+            $ret: $ret / $x;
+        }
+    }
+    
+    @return $ret;
+}
+
+@function factorial ($x) {
+    $ret: 1;
+    
+    @if $x > 0 {
+        @while $x > 0 {
+            $ret: $ret * $x;
+            
+            $x: $x - 1;
+        }
+    } @else {
+        $ret: 1;
+    }
+    
+    @return $ret;
+}
+
+@function sin ($x) {
+    $ret: 0;
+    
+    @for $n from 0 to 25 {
+        $ret: $ret + power(-1, $n) * power($x, 2 * $n + 1) / factorial(2 * $n + 1);
+    }
+
+    @return $ret;
+}
+
+@function cos ($x) {
+    $ret: 0;
+    
+    @for $n from 0 to 25 {
+        $ret: $ret + power(-1, $n) * power($x, 2 * $n) / factorial(2 * $n);
+    }
+
+    @return $ret;
+}
+
+@mixin border-radius ($top-left, $top-right: null, $bottom-right: null, $bottom-left: null) {
+	@if $top-right == null {$top-right: $top-left}
+	@if $bottom-right == null {$bottom-right: $top-left}
+	@if $bottom-left == null {$bottom-left: $top-left}
+	
+	/* FF1+ */
+	-moz-border-radius-topleft: $top-left;
+	-moz-border-radius-topright: $top-right;
+	-moz-border-radius-bottomright: $bottom-right;
+	-moz-border-radius-bottomleft: $bottom-left;
+
+	/* Saf3-4, iOS 1+, Android 1.5+ */
+	-webkit-border-top-left-radius: $top-left;
+	-webkit-border-top-right-radius: $top-right;
+	-webkit-border-bottom-right-radius: $bottom-right;
+	-webkit-border-bottom-left-radius: $bottom-left;
+
+	/* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+	border-top-left-radius: $top-left;
+	border-top-right-radius: $top-right;
+	border-bottom-right-radius: $bottom-right;
+	border-bottom-left-radius: $bottom-left;
+          
+	/* useful if you don't want a bg color from leaking outside the border: */        
+	-moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; 
+}
+
+@mixin opacity ($opacity) {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity*100})";
+    filter: alpha(opacity=$opacity*100);
+    -moz-opacity:$opacity;
+    -khtml-opacity: $opacity;
+    -webkit-opacity: $opacity;
+    opacity: $opacity;
+}
+
+@mixin transition ($property, $duration, $easing) {
+	-moz-transition: $property $duration $easing;  /* FF4+ */
+	-o-transition: $property $duration $easing;  /* Opera 10.5+ */
+	-webkit-transition: $property $duration $easing;  /* Saf3.2+, Chrome */
+	-ms-transition: $property $duration $easing;  /* IE10? */
+	transition: $property $duration $easing;  
+}
+@mixin background-size ($bg-size-1, $bg-size-2: null) {
+	@if $bg-size-2 == null {$bg-size-2: $bg-size-1}
+	-moz-background-size: $bg-size-1 $bg-size-2; /* FF3.6 */
+	-webkit-background-size: $bg-size-1 $bg-size-2; /* Saf3-4 */
+	background-size: $bg-size-1 $bg-size-2; /* Opera, IE9, Saf5, Chrome, FF4 */
+}
+
+@mixin rotate($degrees) {
+	-moz-transform: rotate(#{$degrees}deg);  /* FF3.5+ */
+	-o-transform: rotate(#{$degrees}deg);  /* Opera 10.5 */
+	-webkit-transform: rotate(#{$degrees}deg);  /* Saf3.1+, Chrome */
+	-ms-transform: rotate(#{$degrees}deg);  /* IE9 */
+	transform: rotate(#{$degrees}deg);
+
+	
+	/* Convert from radians to degrees */
+	$pi: 3.1415926535897;
+	$radians: $degrees * $pi / 180;
+	
+	$x: $radians;
+
+	/* IE6–IE9  */
+    filter: progid:DXImageTransform.Microsoft.Matrix(
+            M11=#{cos($x)}, M12=#{-1*sin($x)},M21=#{sin($x)}, M22=#{cos($x)}, sizingMethod='auto expand');
+      zoom: 1;
+}
+@mixin box-shadow($color, $blur, $offset-left: null, $offset-top: null) {
+    
+    @if $offset-left == null { $offset-left: 0px }
+    @if $offset-top == null { $offset-top: 0px }
+    
+	-moz-box-shadow: $offset-left $offset-top $blur $color; /* FF3.5+ */
+	-webkit-box-shadow: $offset-left $offset-top $blur $color; /* Saf3.0+, Chrome */
+	box-shadow: $offset-left $offset-top $blur $color; /* Opera 10.5, IE9, Chrome 10+ */
+}
+@mixin gradient ($start-pos, $end-pos, $start-color, $end-color) {
+    $deg-end-pos: null;
+    
+    @if $end-pos == right bottom {
+        $deg-end-pos: 315deg;
+    } @else if $end-pos == left bottom {
+        $deg-end-pos: 225deg;
+    } @else if $end-pos == left top {
+        $deg-end-pos: 135deg;
+    } @else if $end-pos == right top  {
+        $deg-end-pos: 45deg;
+    }
+    
+    background-color: $start-color;
+    background-image: -webkit-gradient(linear, $start-pos, $end-pos, from($start-color), to($end-color)); /* Saf4+, Chrome */
+    
+    @if $deg-end-pos == null {
+        background-image: -o-linear-gradient($start-pos, $start-color, $end-color); /* Opera 11.10+ */
+        background-image: -ms-linear-gradient($start-pos, $start-color, $end-color); /* IE10 */
+        background-image: -moz-linear-gradient($start-pos, $start-color, $end-color); /* FF3.6 */
+        background-image: -webkit-linear-gradient($start-pos, $start-color, $end-color); /* Chrome 10+, Saf5.1+ */
+    } @else {
+        background-image: -o-linear-gradient($start-pos $deg-end-pos, $start-color, $end-color); /* Opera 11.10+ */
+        background-image: -ms-linear-gradient($start-pos $deg-end-pos, $start-color, $end-color); /* IE10 */
+        background-image: -moz-linear-gradient($start-pos $deg-end-pos, $start-color, $end-color); /* FF3.6 */
+        background-image: -webkit-linear-gradient($start-pos $deg-end-pos, $start-color, $end-color); /* Chrome 10+, Saf5.1+ */
+    }
+    background-image: linear-gradient($start-pos, $start-color, $end-color);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$start-color}', EndColorStr='#{$end-color}'); /* IE6–IE9 */
+}
+
+@mixin text-shadow ($offset-left, $offset-right, $blur, $color) {
+	text-shadow: $offset-left $offset-right $blur $color; /* FF3.5+, Opera 9+, Saf1+, Chrome */
+}
+
+@mixin font-face ($name, $url, $format, $alt-url1: null, $alt-format1: null, $alt-url2: null, $alt-format2: null) {
+	$src: url($url) format($format);
+	$comma: ", ";
+	
+	@if $alt-url1 != null  {
+		@if $alt-format1 != null {
+			$src: $src #{$comma} url($alt-url1) format($alt-format1);
+		}
+	}
+	
+	@if $alt-url2 != null {
+	    @if $alt-format2 != null {
+	        $src: $src #{$comma} url($alt-url2) format($alt-format2);
+	    }
+	}
+	
+	@font-face {
+		font-family: $name;
+		src: $src;
+	}
+}

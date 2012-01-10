@@ -1,0 +1,85 @@
+#banner {
+    position:relative;
+    height:100px;
+    background:transparent;
+    background-image:-webkit-gradient(linear, left top, right top, 
+            color-stop(0, rgba(255, 0, 0, 0.4)), 
+            color-stop(50%, rgba(0, 0, 255, 0.4)), 
+            color-stop(1, rgba(0, 255, 0, 0.4))), 
+        url(img/banner-bg.png);
+    background-repeat:repeat-x;
+    @include box-shadow(#e8e8e8, 5px, 2px, 0);
+    h1 {
+        text-indent:-9999em;
+    }
+    nav {
+        font-size:14px;
+        position: absolute;
+        left: 0;
+        bottom: 20px;
+        margin-left:-15px;
+        @include box-shadow(#555, 5px, 0, 0);
+        .left-triangle {
+            display: block;
+            border-color: transparent transparent transparent #555;
+            border-style: solid;
+            border-width: 10px;
+            position: absolute;
+            left: 5px;
+            top: 15px;
+            @include rotate(-45);
+        }
+        ul {
+            background:#444;
+            li {
+                padding:0 15px 0 10px;
+                position:relative;
+                display:inline-block; 
+                height:25px;
+                line-height:25px;
+                a {
+                    display:block;
+                    border-bottom:2px solid transparent;
+                    height:23px;
+                    padding:0 5px;
+                    &:active, &:visited {
+                        color:#fff;
+                    }
+                    &:hover {
+                        border-bottom:2px solid #575BB9;
+                    }
+                }
+                &.has-submenu::after {
+                    display: block;
+                    content:"";
+                    border-color: white transparent transparent transparent;
+                    border-style: solid;
+                    border-width: 3px;
+                    position: absolute;
+                    right: 7px;
+                    top: 11px;
+                }
+                ul {
+                    display:none;
+                    position:absolute;
+                    top:25px;
+                    left:0;
+                    @include box-shadow(#555, 5px, 2px, 2px);
+                    @include border-radius(0, 0, 5px, 5px);
+                    padding:4px 0;
+                    li {
+                        display:block;
+                        padding:0;
+                        a {
+                            padding:0 15px 0 10px;
+                            &:hover {
+                                background:#666; 
+                                border-bottom:2px solid transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

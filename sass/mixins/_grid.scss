@@ -1,0 +1,45 @@
+$columns: 20;
+$gutter-width: 10px;
+
+
+@function span($n) {
+    @return ($column-width * $n) + (2 * $gutter-width * ($n - 1));
+}
+
+@mixin first {
+    margin-left:0;
+}
+@mixin last {
+    margin-right:0;
+}
+
+@mixin col-base($first: false, $last: false) {
+    float:left;
+    margin:0 $gutter-width;
+    @if $first {
+        @include first;
+    } @elseif $last {
+        @include last;
+    }
+}
+
+@mixin col($n, $first: false, $last: false) {
+    @include col-base($first, $last);
+    width: span($n);   
+}
+
+@mixin push($n) {
+    margin-left: span($n);
+}
+
+@mixin pull($n) {
+    margin-left: -1 * span($n);
+}
+
+@mixin append($n) {
+    padding-right: span($n); 
+}
+
+@mixin prepend($n) {
+    padding-left: span($n); 
+}
