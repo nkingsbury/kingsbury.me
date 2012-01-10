@@ -848,6 +848,8 @@ body {
   height: 100px;
   background: transparent;
   background-image: -webkit-gradient(linear, left top, right top, color-stop(0, rgba(255, 0, 0, 0.4)), color-stop(50%, rgba(0, 0, 255, 0.4)), color-stop(1, rgba(0, 255, 0, 0.4))), url(img/banner-bg.png);
+  background-image: -moz-linear-gradient(left, rgba(255, 0, 0, 0.4), rgba(0, 0, 255, 0.4), rgba(0, 255, 0, 0.4)), url(img/banner-bg.png);
+  background-image: gradient(linear, left top, right top, color-stop(0, rgba(255, 0, 0, 0.4)), color-stop(50%, rgba(0, 0, 255, 0.4)), color-stop(1, rgba(0, 255, 0, 0.4))), url(img/banner-bg.png);
   background-repeat: repeat-x;
   -moz-box-shadow: 2px 0 5px #e8e8e8;
   /* FF3.5+ */
@@ -856,11 +858,11 @@ body {
   box-shadow: 2px 0 5px #e8e8e8;
   /* Opera 10.5, IE9, Chrome 10+ */
 }
-/* line 12, ../sass/partials/_banner.scss */
+/* line 22, ../sass/partials/_banner.scss */
 #banner h1 {
   text-indent: -9999em;
 }
-/* line 15, ../sass/partials/_banner.scss */
+/* line 25, ../sass/partials/_banner.scss */
 #banner nav {
   font-size: 14px;
   position: absolute;
@@ -874,7 +876,7 @@ body {
   box-shadow: 0 0 5px #555555;
   /* Opera 10.5, IE9, Chrome 10+ */
 }
-/* line 22, ../sass/partials/_banner.scss */
+/* line 32, ../sass/partials/_banner.scss */
 #banner nav .left-triangle {
   display: block;
   border-color: transparent transparent transparent #555;
@@ -897,11 +899,11 @@ body {
   filter: progid:DXImageTransform.Microsoft.Matrix(M11=0.707, M12=0.707,M21=-0.707, M22=0.707, sizingMethod='auto expand');
   zoom: 1;
 }
-/* line 32, ../sass/partials/_banner.scss */
+/* line 42, ../sass/partials/_banner.scss */
 #banner nav ul {
   background: #444;
 }
-/* line 34, ../sass/partials/_banner.scss */
+/* line 44, ../sass/partials/_banner.scss */
 #banner nav ul li {
   padding: 0 15px 0 10px;
   position: relative;
@@ -909,22 +911,22 @@ body {
   height: 25px;
   line-height: 25px;
 }
-/* line 40, ../sass/partials/_banner.scss */
+/* line 50, ../sass/partials/_banner.scss */
 #banner nav ul li a {
   display: block;
   border-bottom: 2px solid transparent;
   height: 23px;
   padding: 0 5px;
 }
-/* line 45, ../sass/partials/_banner.scss */
+/* line 55, ../sass/partials/_banner.scss */
 #banner nav ul li a:active, #banner nav ul li a:visited {
   color: #fff;
 }
-/* line 48, ../sass/partials/_banner.scss */
+/* line 58, ../sass/partials/_banner.scss */
 #banner nav ul li a:hover {
   border-bottom: 2px solid #575BB9;
 }
-/* line 52, ../sass/partials/_banner.scss */
+/* line 62, ../sass/partials/_banner.scss */
 #banner nav ul li.has-submenu::after {
   display: block;
   content: "";
@@ -935,7 +937,7 @@ body {
   right: 7px;
   top: 11px;
 }
-/* line 62, ../sass/partials/_banner.scss */
+/* line 72, ../sass/partials/_banner.scss */
 #banner nav ul li ul {
   display: none;
   position: absolute;
@@ -968,16 +970,16 @@ body {
   background-clip: padding-box;
   padding: 4px 0;
 }
-/* line 70, ../sass/partials/_banner.scss */
+/* line 80, ../sass/partials/_banner.scss */
 #banner nav ul li ul li {
   display: block;
   padding: 0;
 }
-/* line 73, ../sass/partials/_banner.scss */
+/* line 83, ../sass/partials/_banner.scss */
 #banner nav ul li ul li a {
   padding: 0 15px 0 10px;
 }
-/* line 75, ../sass/partials/_banner.scss */
+/* line 85, ../sass/partials/_banner.scss */
 #banner nav ul li ul li a:hover {
   background: #666;
   border-bottom: 2px solid transparent;
