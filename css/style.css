@@ -1,3 +1,4 @@
+@charset "IBM437";
 /* line 1, ../sass/partials/_reset.scss */
 * {
   margin: 0;
@@ -361,7 +362,7 @@ td {
 
 /* line 1, ../sass/partials/_base.scss */
 body {
-  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
 /* line 7, ../sass/partials/_base.scss */
@@ -1079,23 +1080,28 @@ ul.unstyled, ol.unstyled {
 
 /* line 1, ../sass/partials/_main.scss */
 body {
-  background: #e8e8e8;
+  background: #c8c8c8;
 }
 
 /* line 5, ../sass/partials/_main.scss */
 #content {
-  background: #f5f5f5;
+  font-family: "Trebuchet MS", sans-serif;
+  text-transform: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  color: #444;
+  background: #e8e8e8;
   min-height: 500px;
   margin-bottom: 20px;
   padding: 5px 25px;
-  -moz-box-shadow: 2px 2px 5px #cccccc;
+  -moz-box-shadow: 2px 2px 5px #747474;
   /* FF3.5+ */
-  -webkit-box-shadow: 2px 2px 5px #cccccc;
+  -webkit-box-shadow: 2px 2px 5px #747474;
   /* Saf3.0+, Chrome */
-  box-shadow: 2px 2px 5px #cccccc;
+  box-shadow: 2px 2px 5px #747474;
   /* Opera 10.5, IE9, Chrome 10+ */
 }
-/* line 12, ../sass/partials/_main.scss */
+/* line 17, ../sass/partials/_main.scss */
 #content #left {
   float: left;
   margin-left: 10px;
@@ -1103,7 +1109,7 @@ body {
   margin-left: 0;
   width: 680px;
 }
-/* line 15, ../sass/partials/_main.scss */
+/* line 20, ../sass/partials/_main.scss */
 #content #right {
   float: left;
   margin-left: 10px;
@@ -1122,11 +1128,11 @@ body {
   background-image: -o-linear-gradient(left, rgba(255, 0, 0, 0.4), rgba(0, 0, 255, 0.4), rgba(0, 255, 0, 0.4)), url(img/banner-bg.png);
   background-image: linear-gradient(left, rgba(255, 0, 0, 0.4), rgba(0, 0, 255, 0.4), rgba(0, 255, 0, 0.4)), url(img/banner-bg.png);
   background-repeat: repeat-x;
-  -moz-box-shadow: 2px 0 5px #cccccc;
+  -moz-box-shadow: 2px 0 5px #747474;
   /* FF3.5+ */
-  -webkit-box-shadow: 2px 0 5px #cccccc;
+  -webkit-box-shadow: 2px 0 5px #747474;
   /* Saf3.0+, Chrome */
-  box-shadow: 2px 0 5px #cccccc;
+  box-shadow: 2px 0 5px #747474;
   /* Opera 10.5, IE9, Chrome 10+ */
 }
 /* line 27, ../sass/partials/_banner.scss */
