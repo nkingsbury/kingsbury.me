@@ -364,14 +364,66 @@ body {
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
-/* line 6, ../sass/partials/_base.scss */
+/* line 7, ../sass/partials/_base.scss */
+h1 {
+  font-size: 48px;
+}
+
+/* line 7, ../sass/partials/_base.scss */
+h2 {
+  font-size: 24px;
+}
+
+/* line 7, ../sass/partials/_base.scss */
+h3 {
+  font-size: 16px;
+}
+
+/* line 7, ../sass/partials/_base.scss */
+h4 {
+  font-size: 12px;
+}
+
+/* line 7, ../sass/partials/_base.scss */
+h5 {
+  font-size: 9.6px;
+}
+
+/* line 7, ../sass/partials/_base.scss */
+h6 {
+  font-size: 8px;
+}
+
+/* line 11, ../sass/partials/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2em;
+  letter-spacing: -1px;
+}
+/* line 14, ../sass/partials/_base.scss */
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+  letter-spacing: 0px;
+  color: #333;
+}
+
+/* line 20, ../sass/partials/_base.scss */
+p {
+  margin: 10px 0 15px;
+}
+
+/* line 22, ../sass/partials/_base.scss */
+ul, ol {
+  list-style-type: disc;
+  margin: 5px 0;
+  padding: 0 0 0 20px;
+}
+/* line 26, ../sass/partials/_base.scss */
 ul.unstyled, ol.unstyled {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 13, ../sass/partials/_base.scss */
+/* line 33, ../sass/partials/_base.scss */
 #loading {
   display: none;
   position: absolute;
@@ -381,7 +433,7 @@ ul.unstyled, ol.unstyled {
   right: 0;
   z-index: 999;
 }
-/* line 21, ../sass/partials/_base.scss */
+/* line 41, ../sass/partials/_base.scss */
 #loading p {
   background: rgba(0, 0, 0, 0.5);
   padding: 5px;
@@ -419,20 +471,20 @@ ul.unstyled, ol.unstyled {
   margin: 0 auto;
   padding: 0;
 }
-/* line 7, ../sass/partials/_grid.scss */
-.container .first {
-  margin-left: 0;
-}
-/* line 10, ../sass/partials/_grid.scss */
-.container .last {
-  margin-right: 0;
-}
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-1 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 30px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-1 {
@@ -450,12 +502,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-1 {
   padding-left: 30px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-2 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 80px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-2 {
@@ -473,12 +533,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-2 {
   padding-left: 80px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-3 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 130px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-3 {
@@ -496,12 +564,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-3 {
   padding-left: 130px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-4 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 180px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-4 {
@@ -519,12 +595,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-4 {
   padding-left: 180px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-5 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 230px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-5 {
@@ -542,12 +626,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-5 {
   padding-left: 230px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-6 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 280px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-6 {
@@ -565,12 +657,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-6 {
   padding-left: 280px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-7 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 330px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-7 {
@@ -588,12 +688,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-7 {
   padding-left: 330px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-8 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 380px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-8 {
@@ -611,12 +719,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-8 {
   padding-left: 380px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-9 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 430px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-9 {
@@ -634,12 +750,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-9 {
   padding-left: 430px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-10 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 480px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-10 {
@@ -657,12 +781,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-10 {
   padding-left: 480px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-11 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 530px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-11 {
@@ -680,12 +812,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-11 {
   padding-left: 530px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-12 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 580px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-12 {
@@ -703,12 +843,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-12 {
   padding-left: 580px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-13 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 630px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-13 {
@@ -726,12 +874,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-13 {
   padding-left: 630px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-14 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 680px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-14 {
@@ -749,12 +905,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-14 {
   padding-left: 680px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-15 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 730px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-15 {
@@ -772,12 +936,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-15 {
   padding-left: 730px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-16 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 780px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-16 {
@@ -795,12 +967,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-16 {
   padding-left: 780px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-17 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 830px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-17 {
@@ -818,12 +998,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-17 {
   padding-left: 830px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-18 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 880px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-18 {
@@ -841,12 +1029,20 @@ ul.unstyled, ol.unstyled {
 .container .prepend-18 {
   padding-left: 880px !important;
 }
-/* line 15, ../sass/partials/_grid.scss */
+/* line 8, ../sass/partials/_grid.scss */
 .container .col-19 {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
   width: 930px;
+}
+/* line 13, ../sass/partials/_grid.scss */
+.container .first {
+  margin-left: 0;
+}
+/* line 16, ../sass/partials/_grid.scss */
+.container .last {
+  margin-right: 0;
 }
 /* line 19, ../sass/partials/_grid.scss */
 .container .push-19 {
@@ -1061,26 +1257,98 @@ body {
   border-bottom: 2px solid transparent;
 }
 
-/* line 2, ../sass/partials/_resume.scss */
-#resume > header h1 {
-  font-size: 3em;
+/* line 3, ../sass/partials/_resume.scss */
+#resume > header hgroup {
+  float: left;
 }
-/* line 6, ../sass/partials/_resume.scss */
-#resume section > header {
-  font-size: 2em;
+/* line 5, ../sass/partials/_resume.scss */
+#resume > header hgroup h1[itemprop="fn"] {
+  font-size: 57.6px;
 }
-/* line 9, ../sass/partials/_resume.scss */
-#resume section .resume-wrapper {
+/* line 8, ../sass/partials/_resume.scss */
+#resume > header hgroup address {
+  display: inline;
+}
+/* line 12, ../sass/partials/_resume.scss */
+#resume > header blockquote[itemprop="summary"] {
+  color: #444;
+  width: 375px;
+  float: right;
+  background: rgba(230, 200, 45, 0.1);
+  position: relative;
+  /* FF1+ */
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  /* Saf3-4, iOS 1+, Android 1.5+ */
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  /* Opera 10.5, IE9, Saf5, Chrome, FF4 */
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  /* useful if you don't want a bg color from leaking outside the border: */
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+/* line 19, ../sass/partials/_resume.scss */
+#resume > header blockquote[itemprop="summary"] p {
+  padding: 10px 30px;
+}
+/* line 22, ../sass/partials/_resume.scss */
+#resume > header blockquote[itemprop="summary"]:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  border: 15px solid transparent;
+  border-right-color: rgba(230, 200, 45, 0.1);
+  display: block;
+  width: 0;
+}
+/* line 35, ../sass/partials/_resume.scss */
+#resume section [itemprop="vevent"] {
+  margin: 15px 0 20px;
+}
+/* line 37, ../sass/partials/_resume.scss */
+#resume section [itemprop="vevent"] [itemprop="summary"] {
   position: relative;
 }
-/* line 11, ../sass/partials/_resume.scss */
-#resume section .resume-wrapper [itemprop="duration"] {
+/* line 39, ../sass/partials/_resume.scss */
+#resume section [itemprop="vevent"] [itemprop="summary"] [itemprop="duration"] {
+  font-style: italic;
   position: absolute;
   right: 0;
-  margin-top: -50px;
-  font-size: 12px;
+  top: 0;
+  font-size: 14px;
 }
-/* line 20, ../sass/partials/_resume.scss */
-#resume #contact > [itemprop] {
-  display: inline-block;
+/* line 45, ../sass/partials/_resume.scss */
+#resume section [itemprop="vevent"] [itemprop="summary"] [itemprop="duration"] time.expected {
+  position: relative;
+}
+/* line 47, ../sass/partials/_resume.scss */
+#resume section [itemprop="vevent"] [itemprop="summary"] [itemprop="duration"] time.expected::after {
+  content: "*";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -5px;
+}
+/* line 59, ../sass/partials/_resume.scss */
+#resume > footer {
+  font-size: 10px;
+  padding: 4px 0;
+}
+/* line 62, ../sass/partials/_resume.scss */
+#resume > footer #updated {
+  float: left;
+}
+/* line 65, ../sass/partials/_resume.scss */
+#resume > footer #foot-notes {
+  float: right;
 }

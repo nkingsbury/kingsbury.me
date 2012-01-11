@@ -1,41 +1,45 @@
 <article id="resume" itemscope itemtype="http://microformats.org/profile/hresume">
     <header itemprop="contact" itemscope itemtype="http://microformats.org/profile/hcard" class="clearfix">
-        <h1 itemprop="fn">
-            <span itemprop="given-name">Nicole</span>
-            <span itemprop="familiy-name">Kingsbury</span>
-        </h1>
-        <div id="contact">
-            <address itemprop="adr">
-                <span itemprop="locality">Boston</span>,
-                <span itemprop="region">MA</span>
-                <span itemprop="postal-code">02135</span>
-            </address>
-            //
-            <div itemprop="tel">860-792-1830</div>
-            //
-            <div itemprop="url"><a href="/">kingsbury.me</a></div>
-        </div>
+        <hgroup>
+            <h1 itemprop="fn">
+                <span itemprop="given-name">Nicole</span>
+                <span itemprop="familiy-name">Kingsbury</span>
+            </h1>
+            <h3 id="contact">
+                <address itemprop="adr">
+                    <span itemprop="locality">Boston</span>,
+                    <span itemprop="region">MA</span>
+                    <span itemprop="postal-code">02135</span>
+                </address>
+                //
+                <span itemprop="tel">860-792-1830</span>
+                //
+                <span itemprop="url"><a href="/">kingsbury.me</a></span>
+            </h3>
+        </hgroup>
         <blockquote itemprop="summary">
             <p>I'm currently seeking employment in the <strong>Boston area</strong> having something to do with <strong>books n' stuff</strong>.</p>
         </blockquote>
     </header>
     <section itemprop="experience" class="clearfix">
-        <header class="push-2">
+        <header>
             <h1>{Experience}</h1>
         </header>
-        <div class="resume-wrapper first col-17 push-3 last">
+        <div>
             <ol itempscope itemtype="http://microformats.org/profile/hcalendar" class="unstyled">
                 <li itemprop="vevent">
                     <header itemprop="summary" itempscope itemtype="http://microformats.org/profile/hcard">
-                        <h1 itemprop="title">Intern
+                        <h2 itemprop="title">Intern
                             <small itemprop="org">
                                 <span itemprop="organization-name"><abbr title="Emerson College">Emerson</abbr></span>, 
-                                <span itemprop="organization-unit">Archives</span>
+                                <span itemprop="organization-unit">Library Archives</span>
                             </small>
-                        </h1>
+                        </h2>
                         <h3 itemprop="adr">
-                            <span itemprop="locality">Boston</span>,
-                            <span itemprop="region">MA</span>
+                            <address>
+                                <span itemprop="locality">Boston</span>,
+                                <span itemprop="region">MA</span>
+                            </address>
                         </h3>
                         <div itemprop="duration">
                             <time itemprop="dtstart" datetime="2010-09-15">Sept 2011</time> - <time itemprop="dtend" datetime="2011-12-15">Dec 2011</time>
@@ -53,28 +57,31 @@
                 </li>
                 <li itemprop="vevent">
                     <header itemprop="summary" itempscope itemtype="http://microformats.org/profile/hcard">
-                        <h1 itemprop="title">Technical Writer &amp; Research Specialist
+                        <h2 itemprop="title">Technical Writer &amp; Research Specialist
                             <small itemprop="org">
                                 <span itemprop="organization-name"><abbr title="University of Connecticut">UConn</abbr></span>, 
                                 <span itemprop="organization-unit">School of Business</span>
                             </small>
-                        </h1>
+                        </h2>
                         <h3 itemprop="adr">
-                            <span itemprop="locality">Storrs</span>,
-                            <span itemprop="region">CT</span>
+                            <address>
+                                <span itemprop="locality">Storrs</span>,
+                                <span itemprop="region">CT</span>
+                            </address>
                         </h3>
                         <div itemprop="duration">
                             <time itemprop="dtstart" datetime="2011-05-15">May 2011</time> - <time itemprop="dtend" datetime="2011-09-15">Sept 2011</time>
                         </div>
                     </header>
                     <div itemprop="description">
+                        <p><em>Wrote and maintained helpdesk knowledge base, todo...</em></p>
                         <strong>Daily Responsibilities</strong>
                         <ul>
                             <li>TODO</li>
                         </ul>
                         <strong>Major Projects</strong>
                         <ul>
-                            <li>Virtual Desktop Deployment Project (vPC)
+                            <li>Virtual Desktop Deployment Project (vPC):
                                 <ul>
                                     <li>Researched virtualization possibilities.</li>
                                     <li>Copywriter for project webpage.</li>
@@ -85,22 +92,24 @@
                 </li>
                 <li itemprop="vevent">
                     <header itemprop="summary" itempscope itemtype="http://microformats.org/profile/hcard">
-                        <h1 itemprop="title">Student Technician
+                        <h2 itemprop="title">Student Technician
                             <small itemprop="org">
                                 <span itemprop="organization-name"><abbr title="University of Connecticut">UConn</abbr></span>, 
                                 <span itemprop="organization-unit">School of Business</span>
                             </small>
-                        </h1>
+                        </h2>
                         <h3 itemprop="adr">
-                            <span itemprop="locality">Storrs</span>,
-                            <span itemprop="region">CT</span>
+                            <address>
+                                <span itemprop="locality">Storrs</span>,
+                                <span itemprop="region">CT</span>
+                            </address>
                         </h3>
                         <div itemprop="duration">
                             <time itemprop="dtstart" datetime="2007-08-15">Aug 2007</time> - <time itemprop="dtend" datetime="2011-05-15">May 2011</time>
                         </div>
                     </header>
                     <div itemprop="description">
-                        <p><em>Part-time helpdesk support.</em> Level II</p>
+                        <p><em>Part-time helpdesk support.</em></p>
                         <strong>Daily Responsibilities</strong>
                         <ul>
                             <li>Technical support for more than 200 faculty and staff, as well as 1500 students in the school's laptop distribution initiative.</li>
@@ -110,7 +119,7 @@
                         </ul>
                         <strong>Major Projects</strong>
                         <ul>
-                            <li>Knowledge base.
+                            <li>Knowledge base:
                                 <ul>
                                     <li>Constructed technology-oriented tutorials.</li>
                                     <li>Created information organization structure.</li>
@@ -123,28 +132,30 @@
             </ol>
         </div>
     </section>
-    <section itemprop="education" itemscope itemtype="http://microformats.org/profile/hcalendar" class="clearfix">
-        <header class="push-2">
+    <section itemprop="education" itemscope itemtype="http://microformats.org/profile/hcalendar" class="clearfix ">
+        <header>
             <h1>{Education}</h1>
         </header>
-        <div class="resume-wrapper first col-17 push-3 last">
+        <div>
             <ol itempscope itemtype="http://microformats.org/profile/hcalendar" class="unstyled">
                 <li itemprop="vevent">
                     <header itemprop="summary" itempscope itemtype="http://microformats.org/profile/hcard">
-                        <h1 itemprop="title">
+                        <h2 itemprop="title">
                             <abbr title="Master of Science">M.S.</abbr> 
-                            Library and Information Science
+                            Library &amp; Information Science
                             <small itemprop="org">
                                 <span itemprop="organization-name"><abbr title="Simmons College">Simmons</abbr></span>, 
                                 <span itemprop="organization-unit"><abbr title="Graduate School of Library &amp; Information Science">GSLIS</abbr></span>
                             </small>
-                        </h1>
+                        </h2>
                         <h3 itemprop="adr">
-                            <span itemprop="locality">Boston</span>,
-                            <span itemprop="region">MA</span>
+                            <address>
+                                <span itemprop="locality">Boston</span>,
+                                <span itemprop="region">MA</span>
+                            </address>
                         </h3>
                         <div itemprop="duration">
-                            <time itemprop="dtstart" datetime="2011-09-01">Sept 2011</time> - <time itemprop="dtend" datetime="2010-05-15">May 2013</time> (expected)
+                            <time itemprop="dtstart" datetime="2011-09-01">Sept 2011</time> - <time itemprop="dtend" datetime="2010-05-15" class="expected">May 2013</time>
                         </div>
                     </header>
                     <!-- unused
@@ -158,17 +169,19 @@
                 </li>
                 <li itemprop="vevent">
                     <header itemprop="summary" itempscope itemtype="http://microformats.org/profile/hcard">
-                        <h1 itemprop="title">
+                        <h2 itemprop="title">
                             <abbr title="Bachelor of Arts">B.A.</abbr> 
                             English
                             <small itemprop="org">
                                 <span itemprop="organization-name"><abbr title="University of Connecticut">UConn</abbr></span>, 
                                 <span itemprop="organization-unit"><abbr title="College of Liberal Arts &amp; Sciences">CLAS</abbr></span>
                             </small>
-                        </h1>
+                        </h2>
                         <h3 itemprop="adr">
-                            <span itemprop="locality">Storrs</span>,
-                            <span itemprop="region">CT</span>
+                            <address>
+                                <span itemprop="locality">Storrs</span>,
+                                <span itemprop="region">CT</span>
+                            </address>
                         </h3>
                         <div itemprop="duration">
                             <time itemprop="dtstart" datetime="2011-09-21">Sept 2007</time> - <time itemprop="dtend" datetime="2011-05-08">May 2011</time>
@@ -183,19 +196,23 @@
             </ol>
         </div>
     </section>
-    <section itemprop="skill"  class="clearfix">
-        <header class="push-2">
+    <section itemprop="skill"  class="clearfix ">
+        <header>
             <h1>{Skills}</h1>
         </header>
-        <div class="resume-wrapper first col-17 push-3 last">
-            <div>
+        <div>
+            <div class="first col-10">
                 <strong>Interpersonal</strong>
                 <ul>
                     <li>Extensive experience with individualized customer service.</li>
                     <li>Outgoing and social, while maintaining appropriate levels of professionalism.</li>
                 </ul>
+                <strong>Communication</strong>
+                <ul>
+                    <li>Familiar with Spanish.</li>
+                </ul>
             </div>
-            <div>
+            <div class="col-9 last">
                 <strong>Technical</strong>
                 <ul>
                     <li>Windows and Linux Operating Systems.</li>
@@ -204,20 +221,20 @@
                     <li>Microsoft Office, Visio, OneNote.</li>
                 </ul>
             </div>
-            <div>
-                <strong>Language</strong>
-                <ul>
-                    <li>Familiar with Spanish.</li>
-                </ul>
-            </div>
         </div>
     </section>
-    <section class="clearfix">
-        <header class="push-2">
+    <section class="clearfix ">
+        <header>
             <h1>{Interests}</h1>
         </header>
-        <div class="resume-wrapper first col-17 push-3 last">
+        <div>
             <p>Learning, spontaneous adventures, travel, English literature, &amp; Eclectic music/art.</p>
         </div>
     </section>
+    <footer role="contentinfo" class="clearfix">
+        <p id="updated">Last updated: <strong>Jan 2012</strong>.</p>
+        <ul id="foot-notes" class="unstyled">
+            <li><p><strong>*</strong> Expected date.</p></li>
+        </ul>
+    </footer>
 </article>

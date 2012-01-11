@@ -3,18 +3,18 @@
     width: ($column-width + 2 * $gutter-width) * $columns - (2 * $gutter-width);
     margin: 0 auto;
     padding: 0;
-    
-    .first {
-        @include first;
-    }
-    .last {
-        @include last;
-    }
-    
+
     @for $n from 1 to $columns {
         .col-#{$n} {
             @include col-base(false);
             width: span($n);
+            
+        }
+        .first {    
+            @include first;
+        }
+        .last {
+            @include last;
         }
         .push-#{$n} {
             margin-left: span($n)!important;

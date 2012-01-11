@@ -1,24 +1,69 @@
 #resume {
-    > header h1 {
-        font-size:3em;
-    }
-    section {
-        > header {
-            font-size:2em;
+    > header {
+        hgroup {
+            float:left;
+            h1[itemprop="fn"] {
+                font-size: $largest-header * 1.2;
+            }
+            address {
+                display:inline;
+            }
         }
-        .resume-wrapper {
-            position:relative;
-            [itemprop="duration"] {
-                position:absolute;
-                right:0;
-                margin-top:-50px;
-                font-size:12px;
+        blockquote[itemprop="summary"] {
+            color: #444;
+            width: 375px;
+            float: right;
+            background: rgba(230,200,45,.1);
+            position: relative;
+            @include border-radius(5px);
+            p {
+                padding: 10px 30px;
+            }
+            &:after {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: -30px;
+                border: 15px solid transparent;
+                border-right-color: rgba(230,200,45,.1);
+                display: block;
+                width: 0;
             }
         }
     }
-    #contact {
-        > [itemprop] {
-            display:inline-block;
+    section {
+        [itemprop="vevent"] {
+            margin: 15px 0 20px;
+            [itemprop="summary"] {
+                position:relative;
+                [itemprop="duration"] {
+                    font-style: italic;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    font-size: 14px;
+                    time.expected {
+                        position:relative;
+                        &::after {
+                            content:"*";
+                            display:block;
+                            position:absolute;
+                            top:0;
+                            right:-5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    > footer {
+        font-size:10px;
+        padding: 4px 0;
+        #updated {
+            float:left;
+        }
+        #foot-notes {
+            float:right;
         }
     }
 }

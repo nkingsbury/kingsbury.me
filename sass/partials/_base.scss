@@ -2,7 +2,27 @@ body {
     font-family:'Helvetica Neue', Arial, Helvetica, sans-serif
 }
 
+$largest-header: 48px;
+@for $n from 1 to 7 {
+    h#{$n} {
+        font-size: $largest-header * 1 / $n;
+    }
+}
+h1,h2,h3,h4,h5,h6 {
+    line-height:1.2em;
+    letter-spacing:-1px;
+    small {
+        letter-spacing:0px;
+        color:#333;
+    }
+}
+
+p { margin: 10px 0 15px; }
+
 ul,ol {
+    list-style-type: disc;
+    margin: 5px 0;
+    padding: 0 0 0 20px;
     &.unstyled {
         list-style: none;
         margin:0;
