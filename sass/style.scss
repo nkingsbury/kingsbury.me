@@ -1,7 +1,9 @@
 @import "mixins/grid";
 @import "mixins/css3";
 @import "partials/reset";
+@import "partials/base";
 
 $column-width: 30px;
 @import "partials/grid";
 @import "partials/main";
+@import "partials/resume"

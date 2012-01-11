@@ -15,11 +15,43 @@ var App = (function($, undefined) {
         $('.has-submenu > ul').hide();
     };
     
+    var reHash = /^#([a-z]+)$/i;
+    
     return {
-        init: function() {            
+        init: function() {     
+            var errorTemplate = _.template($('#error-template').html());
+                   
             $('.has-submenu').bind('click', handleSubmenu);
             
             $(window).bind('click', handleCloseMenu);
+            
+            $('nav a').bind('click', function(e) {
+                e.preventDefault();
+                var href = $(this).attr('href');
+                
+                if(!href.match(reHash))
+                    return;
+                    
+                var $content = $('#content'),
+                    $loading = $('#loading');
+                
+                $loading.show();
+                
+                $.ajax({
+                    url: 'pages/' + reHash.exec(href)[1] + '.html',
+                    success: function(response) {
+                        $content.html(response);
+                    },
+                    error: function(response) {
+                        $content.html(errorTemplate({error: response.message || 'Unknown error...'}));
+                    },
+                    complete: function() {
+                        $loading.hide();
+                    }
+                });
+                    
+                
+            });
         }
     }
     

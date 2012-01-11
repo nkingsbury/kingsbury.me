@@ -10,4 +10,25 @@ ul,ol {
     }
 }
 
+#loading {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    p {
+        background: rgba(0,0,0,0.5);
+        padding: 5px;
+        margin: 0 auto;
+        color: #fff;
+        width: 200px;
+        text-align: center;
+        position: relative;
+        top: 200px;
+        @include border-radius(5px);
+    }
+}
+
 @import "mixins/grid";

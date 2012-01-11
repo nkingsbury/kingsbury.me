@@ -15,7 +15,8 @@ $gutter-width: 10px;
 
 @mixin col-base($first: false, $last: false) {
     float:left;
-    margin:0 $gutter-width;
+    margin-left: $gutter-width;
+    margin-right: $gutter-width;
     @if $first {
         @include first;
     } @elseif $last {

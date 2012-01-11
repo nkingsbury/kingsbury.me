@@ -14,6 +14,9 @@
 </head>
 
 <body>
+    <div id="loading">
+        <p><strong>Loading...</strong> please wait!</p>
+    </div>
     <div class="container">
         <header id="banner">
             <h1>Nicole Kingsbury</h1>
@@ -24,11 +27,11 @@
                     <li class="has-submenu">
                         <a href="#">About</a>
                         <ul>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Resume</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <li><a href="#resume">Resume</a></li>
                         </ul>    
                     </li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="#blog">Blog</a></li>
                 </ul>
             </nav>
         </header>
@@ -42,16 +45,21 @@
                 <p>This is a paragraph of text about nothing in particular!</p>
             </div>
             <div id="right">
+                &nbsp;
             </div>
         </div>
     </div>
     <footer>
 
     </footer>
-    
+    <script id="error-template" type="text/template">
+        <p><strong>Whoops</strong>, something went wrong!</p>
+        <p>msg: <%= error %></p>
+    </script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
+    <script defer src="js/app/namespace.js"></script>
 
     <!-- scripts concatenated and minified via build script -->
     <script defer src="js/plugins.js"></script>

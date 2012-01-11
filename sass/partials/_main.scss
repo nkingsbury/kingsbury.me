@@ -5,6 +5,7 @@ body {
 #content {
     background:#fff;
     min-height:500px;
+    margin-bottom:20px;
     @include box-shadow(#e8e8e8, 5px, 2px, 2px);
     
     #left {

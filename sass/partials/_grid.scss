@@ -3,32 +3,33 @@
     width: ($column-width + 2 * $gutter-width) * $columns - (2 * $gutter-width);
     margin: 0 auto;
     padding: 0;
+    
+    .first {
+        @include first;
+    }
+    .last {
+        @include last;
+    }
+    
     @for $n from 1 to $columns {
         .col-#{$n} {
             @include col-base(false);
             width: span($n);
         }
         .push-#{$n} {
-            margin-left: span($n);
+            margin-left: span($n)!important;
         }
         .pull-#{$n} {
-            margin-left: -1 * span($n);
+            margin-left: -1 * span($n)!important;
         }
         .append-#{$n} {
-            padding-right: span($n);
+            padding-right: span($n)!important;
         }
         .prepend-#{$n} {
-            padding-left: span($n);
+            padding-left: span($n)!important;
         }
     }
-    .first {
-        @include first;
-        padding-left:span(1);
-    }
-    .last {
-        @include last;
-        padding-right:span(1);
-    }
+    
 }
 .clearfix:before, .clearfix:after, .container:before, .container:after { content: ""; display: table; }
 .clearfix:after, .container:after { clear: both; }

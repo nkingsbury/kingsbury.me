@@ -1,0 +1,17 @@
+#resume {
+    section {
+        > header {
+            font-size:2em;
+        }
+        .resume-wrapper {
+            position:relative;
+            [itemprop="duration"] {
+                position:absolute;
+                right:0;
+                margin-top:-50px;
+                font-size:12px;
+            }
+        }
+    }
+    
+}
