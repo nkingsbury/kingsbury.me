@@ -52,8 +52,9 @@
                 display:inline-block; 
                 height:25px;
                 line-height:25px;
-                a {
+                a, .submenu {
                     display:block;
+                    cursor:pointer;
                     color:#fff;
                     border-bottom:2px solid transparent;
                     height:23px;

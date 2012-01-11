@@ -23,9 +23,9 @@
             <nav role="navigation">
                 <span class="left-triangle"></span>
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="#home">Home</a></li>
                     <li class="has-submenu">
-                        <a href="#">About</a>
+                        <span class="submenu">About</span>
                         <ul>
                             <li><a href="#contact">Contact</a></li>
                             <li><a href="#resume">Resume</a></li>
@@ -36,17 +36,6 @@
             </nav>
         </header>
         <div id="content" role="main">
-            <header>
-                <h1>Welcome
-                    <small>...some sort of clever tagline should be here.</small>
-                </h1>
-            </header>
-            <div id="left">
-                <p>This is a paragraph of text about nothing in particular!</p>
-            </div>
-            <div id="right">
-                &nbsp;
-            </div>
         </div>
     </div>
     <footer>
@@ -60,6 +49,7 @@
     <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
 
     <script defer src="js/app/namespace.js"></script>
+    <script defer src="js/app/nav.js"></script>
 
     <!-- scripts concatenated and minified via build script -->
     <script defer src="js/plugins.js"></script>

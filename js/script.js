@@ -25,32 +25,14 @@ var App = (function($, undefined) {
             
             $(window).bind('click', handleCloseMenu);
             
-            $('nav a').bind('click', function(e) {
-                e.preventDefault();
-                var href = $(this).attr('href');
-                
-                if(!href.match(reHash))
-                    return;
-                    
-                var $content = $('#content'),
-                    $loading = $('#loading');
-                
-                $loading.show();
-                
-                $.ajax({
-                    url: 'pages/' + reHash.exec(href)[1] + '.html',
-                    success: function(response) {
-                        $content.html(response);
-                    },
-                    error: function(response) {
-                        $content.html(errorTemplate({error: response.message || 'Unknown error...'}));
-                    },
-                    complete: function() {
-                        $loading.hide();
-                    }
-                });
-                    
-                
+            app.nav({
+                defaultPage: 'home',
+                selector: 'nav',
+                target: '#content',
+                fileExtension: '.html',
+                directory: 'pages/',
+                loading: '#loading',
+                errorTemplate: _.template($('#error-template').html())
             });
         }
     }
