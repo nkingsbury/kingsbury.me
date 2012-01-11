@@ -1,13 +1,18 @@
 body {
-    background:#e8e8e8;
+    background:#c8c8c8;
 }
 
 #content {
-    background:#f5f5f5;
+	font-family: "Trebuchet MS", sans-serif;
+	text-transform: normal;
+	letter-spacing: normal;
+	line-height: normal;
+	color:#444;
+    background:#e8e8e8;
     min-height:500px;
 	padding: 5px ($gutter-width * 2 + span(1)) / 2;
-
-    @include box-shadow(#ccc, 5px, 2px, 2px);
+	
+    @include box-shadow(#747474, 5px, 2px, 2px);
     
     #left {
 		@include col(14, true);
