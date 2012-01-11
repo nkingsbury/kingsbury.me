@@ -1060,18 +1060,26 @@ body {
   border-bottom: 2px solid transparent;
 }
 
-/* line 3, ../sass/partials/_resume.scss */
+/* line 2, ../sass/partials/_resume.scss */
+#resume > header h1 {
+  font-size: 3em;
+}
+/* line 6, ../sass/partials/_resume.scss */
 #resume section > header {
   font-size: 2em;
 }
-/* line 6, ../sass/partials/_resume.scss */
+/* line 9, ../sass/partials/_resume.scss */
 #resume section .resume-wrapper {
   position: relative;
 }
-/* line 8, ../sass/partials/_resume.scss */
+/* line 11, ../sass/partials/_resume.scss */
 #resume section .resume-wrapper [itemprop="duration"] {
   position: absolute;
   right: 0;
   margin-top: -50px;
   font-size: 12px;
+}
+/* line 20, ../sass/partials/_resume.scss */
+#resume #contact > [itemprop] {
+  display: inline-block;
 }

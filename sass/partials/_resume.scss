@@ -1,4 +1,7 @@
 #resume {
+    > header h1 {
+        font-size:3em;
+    }
     section {
         > header {
             font-size:2em;
@@ -13,5 +16,9 @@
             }
         }
     }
-    
+    #contact {
+        > [itemprop] {
+            display:inline-block;
+        }
+    }
 }
